@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Estourar Bolas</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<h1>Você tem 1 minuto para estourar o máximo de bola que conseguir!</h1>
+	<hr>
+	<div id="placar">
+		<span class="Seg">Segundos:</span>
+		<div id="cro">60</div>
+		<span class="Pla">Score:</span>
+		<div id="score">0</div>
+	</div>
+	
+	<div id="botao">
+		<button id="iniciar" onclick="cronometro()">Iniciar</button>
+		<button onclick="reniciar()">Reniciar</button>
+	</div>
+
+	<div id="container"></div>
+	
+</body>
+</html>

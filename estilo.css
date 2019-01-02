@@ -1,0 +1,36 @@
+.bola{
+	width: 80px;
+	height: 80px;
+	background-color: #000000;
+	border-radius: 40px;
+	position: absolute;
+}
+.desabilitado{
+	visibility: hidden;
+}
+#container{
+	position: absolute;
+	left: 80%;
+}
+#placar{
+	display: flex;
+}
+#score, #cro{
+	font-size: 50px;
+	border: 2px solid black;
+	padding: 40px;
+	margin-right: 2px;
+}
+.Pla, .Seg{
+	position: absolute;
+}
+.Pla{
+	left: 150px;
+}
+.Seg{
+	left: 15px;
+}
+#botao{
+	padding-left: 50px;
+	padding-top: 10px;
+}
