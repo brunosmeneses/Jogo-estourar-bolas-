@@ -15,7 +15,7 @@
 #placar{
 	display: flex;
 }
-#score, #cro{
+#score, #tempo{
 	font-size: 50px;
 	border: 2px solid black;
 	padding: 40px;

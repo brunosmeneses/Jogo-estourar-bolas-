@@ -23,23 +23,24 @@ function score(){
 	document.getElementById("score").innerHTML = contador;	
 }
 
+function inicializaCronometro() {
+    var tempoRestante = parseInt(document.getElementById("tempo").innerHTML);
+	document.getElementById('iniciar').setAttribute("disabled", "disabled");
+    var inicio = setInterval(addBola, 500);
 
-function cronometro() {
-	var inicio = setTimeout(addBola, 1000);
+	var cronometroID = setInterval(function() {
+		tempoRestante--;
+		document.getElementById("tempo").innerHTML = tempoRestante;	
+		if (tempoRestante == 0) {
+            clearInterval(cronometroID);
+            clearInterval(inicio);
+            document.getElementById('container').classList.add("desabilitado")
+		}
 
-	var c = parseInt(document.getElementById("cro").innerHTML);
-	c = c - 1;
-	document.getElementById("cro").innerHTML = c;	
-	var t = setTimeout(cronometro, 1000);
-
-	if(c == 0) {
-		clearTimeout(t);
-		clearInterval(inicio);
-		document.getElementById('iniciar').setAttribute("disabled", "disabled");
-		document.getElementById('container').classList.add("desabilitado")
-    }
+	}, 1000);
 }
 
 function reniciar(){
 	window.location.reload();
 }
+
